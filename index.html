@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="vue.js"></script>
+  <title>VueJS</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text">
+    <p>{{ sayHello() }} - <a v-bind:href="link">Google</p>
+  </div>
+  <script>
+  new Vue({
+    el: '#app',
+    data: {
+      title: 'blablabla'
+      link: 'http://google.com'
+    },
+    methods: {
+      sayHello: function() {
+        return this.title;
+      }
+    }
+  })
+  </script>
+</body>
+</html>
